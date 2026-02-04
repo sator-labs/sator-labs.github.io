@@ -3,18 +3,19 @@
  ******************************************************************************/
 
 footer.fixed-bottom {
-  background-color: var(--global-footer-bg-color);
+  background-color: #000000 !important;
+  color: #ffffff;
   font-size: 0.75rem;
 
   .container {
-    color: var(--global-footer-text-color);
+    color: #ffffff;
     padding-top: 9px;
     padding-bottom: 8px;
     text-align: center;
   }
 
   a {
-    color: var(--global-footer-link-color);
+    color: #ffffff;
 
     &:hover {
       color: var(--global-theme-color);
@@ -24,12 +25,25 @@ footer.fixed-bottom {
 }
 
 footer.sticky-bottom {
-  border-top: 1px solid var(--global-divider-color);
+  border-top: 1px solid #000000;
+  background-color: #000000 !important;
+  color: #ffffff;
   padding-top: 40px;
   padding-bottom: 40px;
   font-size: 0.9rem;
 
   .container {
+    background-color: transparent;
+    color: #ffffff;
     text-align: center;
+  }
+
+  a {
+    color: #ffffff;
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: none;
+    }
   }
 }

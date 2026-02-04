@@ -1,9 +1,16 @@
 ---
 layout: default
 ---
+{% assign is_home = page.permalink == '/' %}
 <div class="post">
   <header class="post-header">
-    <h1 class="post-title">
+    {% if is_home and page.profile and page.profile.image %}
+      <div class="landing-logo">
+        {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+        {% include figure.liquid loading="eager" path=profile_image_path class="landing-logo-image" alt=page.profile.image cache_bust=true %}
+      </div>
+    {% endif %}
+    <h1 class="post-title{% if page.permalink == '/' %} landing-title{% endif %}">
       {% if site.title == 'blank' %}
         <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
         {{ site.last_name }}
@@ -15,7 +22,7 @@ layout: default
   </header>
 
   <article>
-    {% if page.profile %}
+    {% if page.profile and is_home == false %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
         {% if page.profile.image %}
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}

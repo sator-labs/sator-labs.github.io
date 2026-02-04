@@ -134,3 +134,30 @@ blockquote {
     }
   }
 }
+
+.post-title {
+  font-family: "Jost", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.landing-title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.landing-logo {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0 1.25rem;
+
+  figure {
+    margin: 0;
+  }
+}
+
+.landing-logo-image {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  border-radius: 0;
+}

@@ -11,6 +11,12 @@
   opacity: 0.95;
 }
 
+.navbar.navbar-home {
+  border-bottom: none;
+  background-color: transparent;
+  opacity: 1;
+}
+
 .navbar .dropdown-menu,
 .btn-group.dropdown .dropdown-menu {
   background-color: var(--global-bg-color);
@@ -61,6 +67,10 @@
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.78rem;
+    font-weight: 400;
 
     &:hover {
       color: var(--global-hover-color);
@@ -113,6 +123,13 @@
       }
     }
   }
+}
+
+.navbar.navbar-home .navbar-brand {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 300;
+  font-size: 1.05rem;
 }
 
 .navbar-toggler {
